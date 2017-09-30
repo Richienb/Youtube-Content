@@ -6,13 +6,15 @@ using namespace std;
 int main(int argc, char* argv[])
 {
 	char command[200];
-	strcpy(command,"git add . & git commit -m ");
+	strcpy(command,"git add . & git commit -m \"");
 
 	if(argc == 2){
 		strcat(command,argv[1]);	
-		strcat(command, " & git push origin master");
+		strcat(command, "\" & git push origin master");
 	    system(command);
-	    cout << "\n Commited and Pushed ! \n";
+	    cout << "\n\n Executing statement \n\n";
+		cout << command;
+	    cout << "\n\t Commited and Pushed ! \n";
 	}
 	else{
 		cout << "\n\nEnter text to commit. \n\n";
